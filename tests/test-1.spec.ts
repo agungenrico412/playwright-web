@@ -14,5 +14,6 @@ test('test', async ({ page }) => {
   // Validate Homepage
   await expect(page.locator('[data-test="primary-header"]')).toContainText('Swag Labs'); 
   await expect(page.locator('[data-test="title"]')).toContainText('Products');
-
+  await expect(page.locator('[data-test="product-sort-container"]')).toHaveValue('az');
+  await expect(page.locator('[data-test="item-4-img-link"]')).toBeVisible();
 });
